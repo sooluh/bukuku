@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | This route will tell the Router which controller/method to use if those
 | provided in the URL cannot be matched to a valid route.
 |
-|	$route['translate_uri_dashes'] = FALSE;
+|	$route['translate_uri_dashes'] = false;
 |
 | This is not exactly a route, but allows you to automatically route
 | controller and method names that contain dashes. '-' isn't a valid
@@ -49,6 +49,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+$route['default_controller'] = 'home';
+$route['404_override'] = 'override';
+$route['translate_uri_dashes'] = false;

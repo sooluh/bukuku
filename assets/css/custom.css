@@ -1,0 +1,15 @@
+#books .book-item {
+	border: none;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+#books .book-item img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 5/8;
+}
+
+#books .book-item p {
+	margin-bottom: 0;
+}
