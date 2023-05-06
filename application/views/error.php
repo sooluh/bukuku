@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Page Not Found</title>
+	<title>An error as occured</title>
 
 	<link rel="stylesheet" href="https://api.fonts.coollabs.io/css?family=Montserrat:700&display=swap">
 

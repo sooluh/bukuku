@@ -73,13 +73,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = true;
 
-$db['default'] = array(
+$db['default'] = [
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '123456',
-	'database' => 'bukuku',
-	'dbdriver' => 'mysqli',
+	'hostname' => $_ENV['DB_HOSTNAME'],
+	'username' => $_ENV['DB_USERNAME'],
+	'password' => $_ENV['DB_PASSWORD'],
+	'database' => $_ENV['DB_DATABASE'],
+	'dbdriver' => $_ENV['DB_DRIVER'],
 	'dbprefix' => '',
 	'pconnect' => false,
 	'db_debug' => (ENVIRONMENT !== 'production'),
@@ -91,6 +91,6 @@ $db['default'] = array(
 	'encrypt' => false,
 	'compress' => false,
 	'stricton' => false,
-	'failover' => array(),
+	'failover' => [],
 	'save_queries' => true
-);
+];

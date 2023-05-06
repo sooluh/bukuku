@@ -1,5 +1,8 @@
-/vendor/
+.vercel/
+vendor/
 application/cache/*
 application/logs/*
+
+.env
 
 !application/*/.htaccess
