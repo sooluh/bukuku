@@ -16,24 +16,24 @@
 				</div>
 
 				<div class="col-md-8">
-					<h6 class="fw-normal text-muted"><?= $book->author ?></h6>
+					<h6 class="fw-normal text-muted mb-1"><?= $book->author ?></h6>
 					<h4><?= $book->name ?></h4>
 
-					<table class="table table-bordered mt-4">
+					<table class="table table-bordered mt-4 mb-0">
 						<tr>
 							<th>Publisher</th>
 							<td>:</td>
-							<td><?= $book->publisher ?></td>
+							<td><?= $book->publisher ?: '-' ?></td>
 						</tr>
 						<tr>
 							<th>Publication Year</th>
 							<td>:</td>
-							<td><?= $book->publication ?></td>
+							<td><?= $book->publication ?: '-' ?></td>
 						</tr>
 						<tr>
 							<th>Owned</th>
 							<td>:</td>
-							<td><?= $book->is_wishlist ? 'Not yet' : 'Yes' ?></td>
+							<td><?= $book->is_wishlist === 't' ? 'Not yet' : 'Yes' ?></td>
 						</tr>
 						<tr>
 							<th>Status</th>
@@ -56,6 +56,11 @@
 							</td>
 						</tr>
 					</table>
+
+					<?php if ($book->is_wishlist === 'f') : ?>
+						<p class="mt-4 mb-1">Where I bought:</p>
+						<a href="<?= $book->url ?>" class="btn btn-sm btn-info" target="_blank">Buy too</a>
+					<?php endif ?>
 				</div>
 			</div>
 		</div>

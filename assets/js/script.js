@@ -1,7 +1,6 @@
 (function ($) {
   'use strict';
 
-  up.firstLoad = true;
   up.log.config.banner = false;
   up.log.disable();
 
@@ -14,13 +13,11 @@
     }
   });
 
-  up.on('up:fragment:inserted', function (evt) {
-    if (up.firstLoad) {
-      up.firstLoad = false;
-      return;
-    }
+  up.compiler('[data-masonry]', function (element) {
+    new Masonry(element);
+  });
 
+  up.on('up:fragment:inserted', function () {
     new LazyLoad({});
-    new Masonry(document.querySelector('[data-masonry]'));
   });
 })(window.jQuery);
