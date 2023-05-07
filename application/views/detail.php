@@ -12,12 +12,12 @@
 		<div id="detail" class="container my-5">
 			<div class="row">
 				<div class="col-md-4 mb-4">
-					<img class="rounded shadow-sm border w-100" src="<?= $book->cover ?>" alt="<?= $book->name ?>">
+					<img class="rounded shadow-sm border w-100 lazy" src="<?= base_url('assets/img/empty.svg') ?>" data-src="<?= $book->cover ?>" alt="<?= $book->name ?>">
 				</div>
 
 				<div class="col-md-8">
-					<h6 class="fw-normal text-muted mb-1"><?= $book->author ?></h6>
-					<h4><?= $book->name ?></h4>
+					<h1 class="h6 fw-normal text-muted mb-1"><?= $book->author ?></h1>
+					<h2 class="h4"><?= $book->name ?></h2>
 
 					<table class="table table-bordered mt-4 mb-0">
 						<tr>
@@ -33,7 +33,7 @@
 						<tr>
 							<th>Owned</th>
 							<td>:</td>
-							<td><?= $book->is_wishlist === 't' ? 'Not yet' : 'Yes' ?></td>
+							<td><?= $book->is_wishlist ? '❎' : '✅' ?></td>
 						</tr>
 						<tr>
 							<th>Status</th>
@@ -57,9 +57,9 @@
 						</tr>
 					</table>
 
-					<?php if ($book->is_wishlist === 'f') : ?>
+					<?php if (!$book->is_wishlist && $book->url) : ?>
 						<p class="mt-4 mb-1">Where I bought:</p>
-						<a href="<?= $book->url ?>" class="btn btn-sm btn-info" target="_blank">Buy too</a>
+						<a href="<?= $book->url ?>" class="btn btn-warning" target="_blank">Buy too ❤️</a>
 					<?php endif ?>
 				</div>
 			</div>

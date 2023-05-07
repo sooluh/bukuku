@@ -3,9 +3,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home extends CI_Controller
 {
-	private $site = 'Books I\'m Reading';
-	private $author = 'Suluh Sulistiawan';
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -15,9 +12,7 @@ class Home extends CI_Controller
 	public function index()
 	{
 		$this->load->view('home', [
-			'author' => $this->author,
-			'site' => $this->site,
-			'title' => $this->site,
+			'page' => settings('title'),
 			'owned' => $this->books->get_owned_books(),
 			'whishlist' => $this->books->get_whishlist_books(),
 		]);
@@ -32,10 +27,11 @@ class Home extends CI_Controller
 			return $this->load->view('error');
 		}
 
+		$book->is_wishlist = $book->is_wishlist === 't';
+		$book->cover = str_replace('&tr=w-300', '', $book->cover);
+
 		$this->load->view('detail', [
-			'author' => $this->author,
-			'site' => $this->site,
-			'title' => $book->name,
+			'page' => $book->name,
 			'book' => $book,
 		]);
 	}

@@ -1,0 +1,16 @@
+CREATE TYPE book_status AS ENUM ('1', '2', '3');
+CREATE TYPE book_rate AS ENUM ('1', '2', '3', '4', '5');
+
+CREATE TABLE books (
+	uuid UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+	name TEXT NOT NULL DEFAULT '',
+	cover TEXT DEFAULT NULL,
+	publisher TEXT NOT NULL DEFAULT '',
+	publication BIGINT NOT NULL,
+	author TEXT NOT NULL DEFAULT '',
+	is_wishlist BOOLEAN NOT NULL DEFAULT false,
+	status book_status NOT NULL DEFAULT '1',
+	rate book_rate DEFAULT '1',
+	url TEXT DEFAULT NULL,
+	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

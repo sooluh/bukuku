@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>An error as occured</title>
 
+	<link rel="preconnect" href="https://api.fonts.coollabs.io" />
 	<link rel="stylesheet" href="https://api.fonts.coollabs.io/css?family=Montserrat:700&display=swap">
 
 	<style>
