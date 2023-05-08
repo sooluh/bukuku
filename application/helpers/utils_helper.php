@@ -45,8 +45,12 @@ function status_text($status)
 function asset($path)
 {
 	if (ENVIRONMENT === 'production') {
+		if ((str_replace(['.css', '.js'], '', $path)) != $path) {
+			$path = str_replace(['.css', '.js'], ['.min.css', '.min.js'], $path);
+		}
+
 		$jsdelivr = 'https://cdn.jsdelivr.net/gh/sooluh/reading/';
-		return $jsdelivr . $path . "?v=" . time();
+		return $jsdelivr . $path;
 	}
 
 	return base_url($path);
