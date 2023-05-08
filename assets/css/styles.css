@@ -212,3 +212,8 @@ footer a.badge {
 .tooltip-inner {
   max-width: none;
 }
+
+#synopsis div > p:last-child,
+#review div > p:last-child {
+  margin-bottom: 0;
+}

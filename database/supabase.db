@@ -9,9 +9,11 @@ CREATE TABLE books (
 	publication BIGINT NOT NULL,
 	author TEXT NOT NULL DEFAULT '',
 	is_wishlist BOOLEAN NOT NULL DEFAULT false,
+	is_pdf BOOLEAN NOT NULL DEFAULT false,
+	synopsis TEXT DEFAULT NULL,
+	review TEXT DEFAULT NULL,
 	status book_status NOT NULL DEFAULT '1',
 	rate book_rate DEFAULT '1',
 	url TEXT DEFAULT NULL,
-	is_pdf BOOLEAN NOT NULL DEFAULT false,
 	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );

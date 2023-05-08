@@ -74,17 +74,21 @@
 					</table>
 
 					<article>
-						<div id="synopsis">
+						<div id="synopsis" class="mb-3">
 							<h3 class="h5 mb-3">Synopsis</h3>
 							<div class="border border-4 border-top-0 border-bottom-0 border-end-0 my-1 me-2">
-								<p class="ps-2 py-1">Coming Soon</p>
+								<div class="ps-2 py-1">
+									<?= $book->synopsis ?: 'Coming Soon' ?>
+								</div>
 							</div>
 						</div>
 
-						<div id="review">
+						<div id="review" class="mb-3">
 							<h3 class="h5 mb-3">Review</h3>
 							<div class="border border-4 border-top-0 border-bottom-0 border-end-0 my-1 me-2">
-								<p class="ps-2 py-1">Coming Soon</p>
+								<div class="ps-2 py-1">
+									<?= $book->review ?: 'Coming Soon' ?>
+								</div>
 							</div>
 						</div>
 					</article>
