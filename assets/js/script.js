@@ -14,5 +14,9 @@
         element.classList.add('loaded');
       },
     });
+
+    [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].map(function (element) {
+      new bootstrap.Tooltip(element);
+    });
   });
 })(window.jQuery);

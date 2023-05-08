@@ -18,7 +18,7 @@
 			<div class="row" data-masonry='{}'>
 				<?php foreach ($owned as $book) : ?>
 					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-						<a href="<?= base_url('book/' . $book->uuid) ?>" class="card book-item" up-layer="new">
+						<a href="<?= base_url('book/' . $book->uuid) ?>" class="card book-item" up-target="main">
 							<div class="shine">
 								<img src="<?= base_url('assets/img/empty.svg') ?>" width="100" height="100" class="card-img-top lazy" data-src="<?= $book->cover ?>" alt="<?= $book->name ?>">
 							</div>
@@ -43,7 +43,7 @@
 			<div class="row" data-masonry='{}'>
 				<?php foreach ($whishlist as $book) : ?>
 					<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-						<a href="<?= base_url('book/' . $book->uuid) ?>" class="card book-item" up-layer="new">
+						<a href="<?= base_url('book/' . $book->uuid) ?>" class="card book-item" up-target="main">
 							<div class="shine">
 								<img src="<?= base_url('assets/img/empty.svg') ?>" width="100" height="100" class="card-img-top lazy" data-src="<?= $book->cover ?>" alt="<?= $book->name ?>">
 							</div>
@@ -59,6 +59,7 @@
 		</div>
 	</main>
 
+	<?php include 'includes/footer.php' ?>
 	<?php include 'includes/script.php' ?>
 </body>
 

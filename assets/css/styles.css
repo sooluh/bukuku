@@ -36,13 +36,24 @@ button:active {
   margin: 0 0.75rem;
 }
 
+@media (min-width: 992px) {
+  .navbar-brand {
+    margin: 0;
+    margin-right: var(--bs-navbar-brand-margin-end);
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+  }
+}
+
 .navbar-toggler {
   border: none;
 }
 
 @media (min-width: 768px) {
   ul.navbar-nav {
-    gap: 15px;
+    gap: 25px;
   }
 }
 
@@ -151,13 +162,9 @@ button:active {
   }
 }
 
-main[up-source] #detail {
-  margin: 1.75rem 0 1.25rem !important;
-}
-
-[up-dismiss] {
-  font-size: 3rem;
-  color: #000;
+table tr th,
+table tr td {
+  vertical-align: middle;
 }
 
 table tr > th {
@@ -167,4 +174,36 @@ table tr > th {
 
 table tr > th + td {
   width: 1px !important;
+}
+
+footer a.badge {
+  padding: 15px 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.thumbnail {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.thumbnail img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pdf {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
 }

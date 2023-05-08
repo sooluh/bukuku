@@ -12,5 +12,6 @@ CREATE TABLE books (
 	status book_status NOT NULL DEFAULT '1',
 	rate book_rate DEFAULT '1',
 	url TEXT DEFAULT NULL,
+	is_pdf BOOLEAN NOT NULL DEFAULT false,
 	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
