@@ -89,9 +89,7 @@
 						</div>
 					</article>
 
-					<div class="mt-4">
-						<script src="https://giscus.app/client.js" data-repo="sooluh/reading" data-repo-id="R_kgDOJfayfw" data-category="General" data-category-id="DIC_kwDOJfayf84CWVYJ" data-mapping="pathname" data-strict="1" data-reactions-enabled="0" data-emit-metadata="1" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async></script>
-					</div>
+					<div id="giscus" class="mt-4"></div>
 				</div>
 			</div>
 		</div>

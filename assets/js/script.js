@@ -1,3 +1,28 @@
+function giscus() {
+  var repository = 'sooluh/reading';
+  var id = 'R_kgDOJfayfw';
+  var category = 'DIC_kwDOJfayf84CWVYJ';
+  var script = document.createElement('script');
+
+  script.src = 'https://giscus.app/client.js';
+  script.setAttribute('data-repo', repository);
+  script.setAttribute('data-repo-id', id);
+  script.setAttribute('data-category', 'General');
+  script.setAttribute('data-category-id', category);
+  script.setAttribute('data-mapping', 'pathname');
+  script.setAttribute('data-strict', '1');
+  script.setAttribute('data-reactions-enabled', '0');
+  script.setAttribute('data-emit-metadata', '1');
+  script.setAttribute('data-input-position', 'top');
+  script.setAttribute('data-theme', 'light');
+  script.setAttribute('data-lang', 'en');
+  script.setAttribute('data-loading', 'lazy');
+  script.setAttribute('crossorigin', 'anonymous');
+  script.setAttribute('async', 'async');
+
+  document.getElementById('giscus').appendChild(script)
+}
+
 (function ($) {
   'use strict';
 
@@ -18,5 +43,13 @@
     [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].map(function (element) {
       new bootstrap.Tooltip(element);
     });
+
+    if (document.getElementById('giscus')) {
+      document.getElementById('giscus').innerHTML = '';
+
+      if (/\/book\//.test(new URL(window.location.href).pathname)) {
+        giscus();
+      }
+    }
   });
 })(window.jQuery);
