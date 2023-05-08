@@ -13,7 +13,7 @@ CREATE TABLE books (
 	synopsis TEXT DEFAULT NULL,
 	review TEXT DEFAULT NULL,
 	status book_status NOT NULL DEFAULT '1',
-	rate book_rate DEFAULT '1',
+	rate book_rate DEFAULT NULL,
 	url TEXT DEFAULT NULL,
 	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );

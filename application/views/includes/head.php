@@ -21,4 +21,4 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/unpoly@3.1.0/unpoly.min.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-beta3/css/all.min.css">
 </noscript>
-<link rel="stylesheet" href="<?= asset('assets/css/styles.css') ?>" />
+<link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>" />
