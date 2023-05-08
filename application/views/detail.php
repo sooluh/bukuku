@@ -12,11 +12,13 @@
 		<div id="detail" class="container my-5">
 			<div class="row">
 				<div class="col-md-4 mb-4">
-					<div class="thumbnail">
-						<img class="rounded shadow-sm border w-100 lazy" src="<?= base_url('assets/img/empty.svg') ?>" data-src="<?= $book->cover ?>" alt="<?= $book->name ?>">
-						<?php if ($book->is_pdf) : ?>
-							<span class="pdf">PDF</span>
-						<?php endif ?>
+					<div class="book-cover sticky-top">
+						<div class="thumbnail">
+							<img class="rounded shadow-sm border w-100 lazy" src="<?= base_url('assets/img/empty.svg') ?>" data-src="<?= $book->cover ?>" alt="<?= $book->name ?>">
+							<?php if ($book->is_pdf) : ?>
+								<span class="pdf">PDF</span>
+							<?php endif ?>
+						</div>
 					</div>
 				</div>
 

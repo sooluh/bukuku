@@ -32,6 +32,10 @@ button:active {
   box-shadow: none !important;
 }
 
+.navbar {
+  z-index: 1030;
+}
+
 .navbar-brand {
   margin: 0 0.75rem;
 }
@@ -183,6 +187,12 @@ footer a.badge {
   justify-content: center;
   align-items: center;
   gap: 5px;
+}
+
+@media (min-width: 768px) {
+  .book-cover {
+    top: 85px;
+  }
 }
 
 .thumbnail {
