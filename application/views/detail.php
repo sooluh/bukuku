@@ -29,13 +29,13 @@
 							<th>Publisher</th>
 							<td>:</td>
 							<td>
-								<?= $book->publisher ?: '<span class="badge bg-secondary rounded-pill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Maybe the author is an Indie Writer!"><i class="fa-duotone fa-question"></i></span>' ?>
+								<?= $book->publisher ?: '<span class="badge bg-secondary rounded-pill" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Maybe the author is an Indie Writer!"><i class="fa-duotone fa-question"></i></span>' ?>
 							</td>
 						</tr>
 						<tr>
 							<th>Publication Year</th>
 							<td>:</td>
-							<td><?= $book->publication ?: '-' ?></td>
+							<td><?= $book->publication ?: 'Unknown' ?></td>
 						</tr>
 						<tr>
 							<th>Owned</th>

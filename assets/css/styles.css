@@ -207,3 +207,8 @@ footer a.badge {
   border-radius: 5px;
   font-size: 14px;
 }
+
+.tooltip,
+.tooltip-inner {
+  max-width: none;
+}
