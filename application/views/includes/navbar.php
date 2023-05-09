@@ -12,10 +12,10 @@
 					<a class="nav-link" href="<?= base_url() ?>" up-target="main">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="https://suluh.my.id" target="_blank">About ↗️</a>
+					<a class="nav-link" href="https://suluh.my.id" target="_blank" data-umami-event="External - About">About ↗️</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="https://notes.suluh.my.id" target="_blank">Notes ↗️</a>
+					<a class="nav-link" href="https://notes.suluh.my.id" target="_blank" data-umami-event="External - Notes">Notes ↗️</a>
 				</li>
 			</ul>
 		</div>
@@ -34,10 +34,10 @@
 				<a class="nav-link text-dark" href="<?= base_url() ?>" up-target="main">Home</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link text-dark" href="https://suluh.my.id" target="_blank">About ↗️</a>
+				<a class="nav-link text-dark" href="https://suluh.my.id" target="_blank" data-umami-event="External - About">About ↗️</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link text-dark" href="https://notes.suluh.my.id" target="_blank">Notes ↗️</a>
+				<a class="nav-link text-dark" href="https://notes.suluh.my.id" target="_blank" data-umami-event="External - Notes">Notes ↗️</a>
 			</li>
 		</ul>
 	</div>

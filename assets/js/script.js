@@ -23,7 +23,7 @@ function giscus() {
   document.getElementById('giscus').appendChild(script)
 }
 
-(function ($) {
+(function () {
   'use strict';
 
   up.log.config.banner = false;
@@ -33,7 +33,14 @@ function giscus() {
     new Masonry(element);
   });
 
-  up.on('up:fragment:inserted', function () {
+  up.on('up:fragment:inserted', function (evt) {
+    if (/\/book\//.test(window.location.href) && window.umami) {
+      var html = evt.target || evt.srcElement;
+      var title = html.querySelector('h2').innerHTML;
+
+      window.umami.track(title);
+    }
+
     new LazyLoad({
       callback_load: function (element) {
         element.classList.add('loaded');
@@ -52,4 +59,4 @@ function giscus() {
       }
     }
   });
-})(window.jQuery);
+})();
