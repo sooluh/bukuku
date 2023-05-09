@@ -6,6 +6,7 @@ function settings($key = null)
 	$settings = [
 		'title' => 'Books I\'m Reading',
 		'author' => 'Suluh Sulistiawan',
+		'email' => 'suluhs@aol.com',
 		'description' => 'List of my reading books, both owned and wishlisted ones, you can have too!',
 		'keywords' => 'books,reading,reading list',
 	];
@@ -17,9 +18,8 @@ function set_title($page = null)
 {
 	$title = settings('title');
 	$author = settings('author');
-	$title = $page ? "$page - $author" : "$title - $author";
 
-	return "<title>$title</title>";
+	return $page ? "$page - $author" : "$title - $author";
 }
 
 function status_class($status)
@@ -40,4 +40,21 @@ function status_text($status)
 		'Read',
 	];
 	return $statuses[$status];
+}
+
+function parse_desc($text)
+{
+	$maxWords = 150;
+	$text = strip_tags($text);
+	$text = str_replace(array("\r\n", "\r", "\n"), ' ', $text);
+	$text = str_replace('"', '', $text);
+	$words = explode(' ', $text);
+
+	if (count($words) > $maxWords) {
+		$words = array_slice($words, 0, $maxWords);
+		$text = implode(' ', $words);
+		$text .= '...';
+	}
+
+	return $text;
 }
