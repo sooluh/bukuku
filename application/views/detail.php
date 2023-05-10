@@ -59,6 +59,8 @@
 									<?php for ($rate = 0; $rate < $book->rate; $rate++) : ?>
 										<span class="emoji">&#x2B50;</span>
 									<?php endfor ?>
+
+									<span>(<?= $book->rate ?>/5)</span>
 								<?php else : ?>
 									Not Rated
 								<?php endif ?>
@@ -66,10 +68,10 @@
 						</tr>
 						<?php if (!$book->is_wishlist && $book->url) : ?>
 							<tr>
-								<th>Where I Bought</th>
+								<th>Want too?</th>
 								<td>:</td>
 								<td>
-									<a href="<?= $book->url ?>" class="text-decoration-none" target="_blank">Buy too ❤️</a>
+									<a href="<?= $book->url ?>" class="text-decoration-none" target="_blank">Get it Here ❤️</a>
 								</td>
 							</tr>
 						<?php endif ?>

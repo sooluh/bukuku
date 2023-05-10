@@ -30,8 +30,8 @@ class Home extends CI_Controller
 			return $this->load->view('error');
 		}
 
-		$book->is_pdf = $book->is_pdf === 't';
-		$book->is_wishlist = $book->is_wishlist === 't';
+		$book->is_pdf = $book->is_pdf === 't' || $book->is_pdf === true;
+		$book->is_wishlist = $book->is_wishlist === 't' || $book->is_wishlist === true;
 		$book->cover = str_replace('&tr=w-300', '', $book->cover);
 
 		$this->load->view('detail', [

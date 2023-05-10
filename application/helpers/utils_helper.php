@@ -4,11 +4,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 function settings($key = null)
 {
 	$settings = [
-		'title' => 'Books I\'m Reading',
-		'author' => 'Suluh Sulistiawan',
-		'email' => 'suluhs@aol.com',
-		'description' => 'List of my reading books, both owned and wishlisted ones, you can have too!',
-		'keywords' => 'books,reading,reading list',
+		'title' => $_ENV['SITE_TITLE'],
+		'author' => $_ENV['SITE_AUTHOR'],
+		'email' => $_ENV['SITE_EMAIL'],
+		'description' => $_ENV['SITE_DESCRIPTION'],
+		'keywords' => $_ENV['SITE_KEYWORDS'],
 	];
 
 	return $key ? $settings[$key] : $settings;
